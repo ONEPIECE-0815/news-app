@@ -8,6 +8,13 @@
   </div>
 </template>
 
+<script>
+import "@/style/global.less";
+export default {
+  
+}
+</script>
+
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

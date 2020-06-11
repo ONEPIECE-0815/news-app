@@ -1,0 +1,98 @@
+// color=====================================
+@primaryColor:#fd7006;
+// bg=========================
+@primaryBgc:#fd7006;
+// textC=======================
+@navTC:#fff;
+// text-unit=====================
+@lh:2.5rem;
+@fz:1.2rem;
+@fw:600;
+// border==========================
+@radius:5px;
+@w:1px;
+@s:solid;
+@c:@primaryColor;
+@activeBorderColor:@primaryColor;
+@titleUnderline:@primaryColor;
+
+// margin unit===================
+@mt-v:1rem;
+@mb-v:1rem;
+@ml-v:1rem;
+@mr-v:1rem;
+
+// shadow=======================
+@sha-v:.5rem;
+@sha-c: #666;
+
+
+// border===========================================
+.border(@c:#ccc;@w:1px;@s:solid;){border: @w @s @c;}
+.border-T(@w:@w;@s:@s;@c:@c;){border-top: @w @s @c;}
+.titleUnderline(@c:@titleUnderline;@w:4px;@s:solid;){border-bottom: @w @s @c;}
+.radius(@r:@radius){border-radius: @r}
+
+// shadow===============================================
+.shadow(@s:@sha-v;@x:0;@y:0;@c:@sha-c;){box-shadow: @x @y @s @c;}
+
+// textStyle=================================================
+.text-transfrom(@val:capitalize){text-transform: @val;}
+.lh(@v:@lh){line-height: @v;}
+
+// font=======================================
+.fz(@v:@fz;){font-size: @v;}
+.fw(@v:@fw){font-weight: @v;}
+
+// bg==============================================================
+.bg-c(@v:@primaryBgc;@c:@navTC){background-color:@v;color: @c;}
+
+
+// margin==================
+.m(@tb:0;@lr:0;){margin:@tb @lr}
+.mt(@v:@mt-v){margin-top: @v;}
+
+//布局============================
+.wh(@w:100%;@h:100%;){width: @w;height: @h;}
+.whl(@w:100%;@h:100%;@lh:inherit){width: @w;height: @h;line-height: @lh;}
+.maxWh(@w:100%;@h:100%){max-width: @w;max-height: @h;}
+.overf(@val:hidden;){overflow: @val;}
+
+//position
+.fixed(@t:0;@r:0;@b:0;@l:0;){position: fixed;top:@t;right: @r;bottom: @b;left: @l;}
+//float
+.float(@val:left;){float: @val;}
+.clearfix{&:after{content: '';display: block;clear: both;}}
+//flex
+.flex-wrap(@jcVal:center;@aiVal:center;@fwVal:nowrap;@direction:initial){
+	display: flex;
+	justify-content: @jcVal;
+	align-items: @aiVal;
+	flex-wrap: @fwVal;
+	flex-direction: @direction;
+}
+.flex-items(@flexBasis:0%;@flexGrow:1;@flexShrink:1;@alignSelf:initial){
+	flex-grow: @flexGrow;
+	flex-shrink: @flexShrink;
+	flex-basis: @flexBasis;
+	align-self: @alignSelf;
+}
+
+// animated==============================================================
+
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateY(20px)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+.fadeInRight {
+	animation-name: fadeInRight
+}
