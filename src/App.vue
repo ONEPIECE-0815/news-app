@@ -9,13 +9,14 @@
 </template>
 
 <script>
+
 export default {
 
 };
 </script>
 
 <style lang="less">
-@import "./style/global.less";
+@import "./style/global";
 #app {
   .flex-wrap(initial,center,initial,column);
   .wh;
