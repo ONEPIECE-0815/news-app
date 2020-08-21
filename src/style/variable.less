@@ -21,6 +21,16 @@
 @mb-v:1rem;
 @ml-v:1rem;
 @mr-v:1rem;
+@mx-v:1rem;
+@my-v:1rem;
+// padding unit===================
+@pt-v:1rem;
+@pb-v:1rem;
+@pl-v:1rem;
+@pr-v:1rem;
+@px-v:1rem;
+@py-v:1rem;
+
 
 // shadow=======================
 @sha-v:.5rem;
@@ -48,12 +58,26 @@
 .bg-c(@v:@primaryBgc;@c:@navTC){background-color:@v;color: @c;}
 
 // 手指样式======================
-// 参考值: https://www.w3school.com.cn/cssref/pr_class_cursor.asp
 .cur(@s:pointer;){cursor: @s;}
+// 参考值: https://www.w3school.com.cn/cssref/pr_class_cursor.asp
 
 // margin==================
-.m(@tb:0;@lr:0;){margin:@tb @lr}
+.m(@t:@mt-v;@r:@mr-v;@b:@mb-v;@l:@ml-v;){margin:@t @r @b @l;}
 .mt(@v:@mt-v){margin-top: @v;}
+.mb(@v:@mb-v){margin-bottom: @v;}
+.ml(@v:@ml-v){margin-left: @v;}
+.mb(@v:@mr-v){margin-right: @v;}
+.mx(@v:@mx-v){padding: initial @v;}
+.my(@v:@my-v){padding: @v initial;}
+
+// padding==================
+.p(@t:@pt-v;@r:@pr-v;@b:@pb-v;@l:@pl-v;){padding:@t @r @b @l;}
+.pt(@v:@pt-v){padding-top: @v;}
+.pb(@v:@pb-v){padding-bottom: @v;}
+.pl(@v:@pl-v){padding-left: @v;}
+.pb(@v:@pr-v){padding-right: @v;}
+.px(@v:@px-v){padding: initial @v;}
+.py(@v:@py-v){padding: @v initial;}
 
 //布局============================
 .wh(@w:100%;@h:100%;){width: @w;height: @h;}

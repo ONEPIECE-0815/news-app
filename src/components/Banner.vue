@@ -46,12 +46,11 @@ export default {
     navigation: {
       type: Object,
       required: false,
-
     },
-    delay:{
-      type:Number,
-      default:3000,
-    }
+    delay: {
+      type: Number,
+      default: 3000,
+    },
   },
   data() {
     return {
@@ -90,7 +89,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../style/variable";
 .banner-container {
   position: relative;
   .wh(100vw, 25vh);

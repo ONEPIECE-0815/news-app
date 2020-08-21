@@ -1,5 +1,8 @@
 <template>
-  <section v-swiper:mySwiper="swiperOption" :class="swiperName">
+  <section 
+  v-swiper:mainBanner="swiperOption" 
+  :class="swiperName"
+  >
     <ul class="swiper-wrapper">
       <li class="swiper-slide" :key="item.id" v-for="item in banners">
         <a :href="item.link" target="_blank">
@@ -32,7 +35,7 @@ export default {
     },
     swiperName: {
       type: String,
-      required: false,
+      required:true
     },
     navigation: {
       type: Object,
@@ -40,11 +43,15 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+    };
   },
   mounted() {
     // console.log("Current Swiper instance object", this.mySwiper);
-    this.mySwiper.slideTo(2, 0, false);
+    this.mainBanner.slideTo(2, 0, false);
+
+    // this.mainBanner.slideTo(1, 0, false);
+    // this.secondBanner.slideTo(1, 0, false);
   },
   components: {
     Swiper,
@@ -57,9 +64,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../style/variable";
 .mainBanner {
   .wh(100%, 25vh);
+  .mb;
   a,
   img {
     .wh;
@@ -73,7 +80,10 @@ export default {
   /deep/.swiper-button-prev,
   .swiper-button-next {
     color: #8e8e8e;
-    &::after{.fz(5em);text-shadow: 0 0 3px #333};
+    &::after {
+      .fz(5em);
+      text-shadow: 0 0 3px #333;
+    }
     &:focus {
       outline: none;
     }
